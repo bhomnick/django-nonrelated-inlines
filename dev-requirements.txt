@@ -1,0 +1,5 @@
+Django
+flake8
+flake8-isort
+pytest
+pytest-django
