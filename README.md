@@ -2,6 +2,9 @@
 
 Django admin inlines for unrelated models
 
+![CircleCI](https://img.shields.io/circleci/build/github/bhomnick/django-nonrelated-inlines)
+![PyPI](https://img.shields.io/pypi/v/django-nonrelated-inlines)
+
 ## Getting started
 
 This app allows you to create admin inlines for models that don't have an
