@@ -23,7 +23,11 @@ jobs:
       - checkout
       - run:
           name: Install python versions
-          command: pyenv local 3.5 3.6 3.7 3.8
+          command: |
+            git clone git://github.com/pyenv/pyenv-update.git $(pyenv root)/plugins/pyenv-update
+            pyenv update
+            pyenv install 3.8.5
+            pyenv local 3.5.2 3.6.5 3.7.0 3.8.5
       - restore_cache:
           keys:
             - v2-dependencies-{{ checksum "dev-requirements.txt" }}
@@ -35,7 +39,7 @@ jobs:
             pip install -r dev-requirements.txt
       - save_cache:
           paths:
-            - ./venv
+            - venv
           key: v2-dependencies-{{ checksum "dev-requirements.txt" }}
       - run:
           name: Lint code
