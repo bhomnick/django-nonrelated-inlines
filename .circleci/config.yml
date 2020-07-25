@@ -77,5 +77,8 @@ jobs:
       - run:
           name: Upload to PyPI
           command: |
+            echo "[distutils]\nindex-servers = pypi\n[pypi]" > ~/.pypirc
+            echo "username=__token__" >> ~/.pypirc
+            echo "password=$PYPI_API_TOKEN" >> ~/.pypirc
             . venv/bin/activate
             twine upload dist/*
