@@ -14,6 +14,7 @@ setuptools.setup(
     url='https://github.com/bhomnick/django-nonrelated-inlines',
     packages=setuptools.find_packages(),
     install_requires=[
+        'Django>=1.11'
     ],
-    python_requires='>=3.6',
+    python_requires='>=3.5',
 )

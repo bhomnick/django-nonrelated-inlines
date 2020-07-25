@@ -2,7 +2,7 @@ from django.contrib.auth.models import User
 from django.test import TestCase
 from django.urls import reverse
 
-from tests.testapp.models import Customer, Invoice
+from .testapp.models import Customer, Invoice
 
 
 class TestAdmin(TestCase):

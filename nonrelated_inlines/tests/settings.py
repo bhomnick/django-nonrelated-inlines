@@ -13,10 +13,10 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.sites',
-    'tests.testapp'
+    'nonrelated_inlines.tests.testapp'
 ]
 
-ROOT_URLCONF = 'tests.urls'
+ROOT_URLCONF = 'nonrelated_inlines.tests.urls'
 
 MIDDLEWARE = [
     'django.contrib.sessions.middleware.SessionMiddleware',
