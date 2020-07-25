@@ -17,14 +17,14 @@ class VerifyVersion(install):
     def run(self):
         tag = os.getenv('CIRCLE_TAG')
         if tag != VERSION:
-            sys.exit(f'Git tag: {0} does not match the version of this app: {1}'.format(
+            sys.exit('Git tag: {0} does not match the version of this app: {1}'.format(
                 tag, VERSION))
 
 
 setuptools.setup(
     name='django-nonrelated-inlines',
     version=VERSION,
-    description='Non-related inlines for Django admin',
+    description='Django admin inlines for unrelated models',
     long_description=long_description,
     long_description_content_type='text/markdown',
     url='https://github.com/bhomnick/django-nonrelated-inlines',
@@ -62,6 +62,6 @@ setuptools.setup(
     ],
     python_requires='>=3.5',
     cmdclass={
-        'verify': VerifyVersionCommand,
+        'verify': VerifyVersion,
     }
 )

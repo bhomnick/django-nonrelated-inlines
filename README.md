@@ -13,11 +13,11 @@ methods.
 
 * `get_form_queryset(self, obj)` returns all objects that should be shown in
   the inline formset.
-* `save_new_instance(self, parent, instace)` given a parent object and a new
+* `save_new_instance(self, parent, instance)` given a parent object and a new
   child object instance should associate the child object with the parent.
 
 For example, let's assume we have `Customer` and `Invoice` models. `Invoice`
-objects are linked to a `Customer` if they share the same email address.
+objects are associated with a `Customer` if they share the same email address.
 
 ```python
 from nonrelated_inlines.admin import NonrelatedStackedInline
