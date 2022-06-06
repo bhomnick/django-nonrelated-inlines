@@ -64,6 +64,7 @@ jobs:
       - run:
           name: Install dependencies
           command: |
+            pyenv install 3.8.13
             pyenv local 3.8.13
             python3 -m venv venv
             . venv/bin/activate
