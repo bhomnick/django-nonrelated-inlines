@@ -9,7 +9,7 @@ with open('README.md', 'r') as fh:
     long_description = fh.read()
 
 
-VERSION = '0.1'
+VERSION = '0.2'
 
 
 class VerifyVersion(install):
@@ -40,6 +40,8 @@ setuptools.setup(
         'Framework :: Django :: 2.2',
         'Framework :: Django :: 3.0',
         'Framework :: Django :: 3.1',
+        'Framework :: Django :: 3.2',
+        'Framework :: Django :: 4.0',
         'Framework :: Flake8',
         'Framework :: tox',
         'Intended Audience :: Developers',
@@ -48,11 +50,11 @@ setuptools.setup(
         'Programming Language :: Python',
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3 :: Only',
-        'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
         'Programming Language :: Python :: 3.8',
         'Programming Language :: Python :: 3.9',
+        'Programming Language :: Python :: 3.10',
         'Topic :: Software Development :: Libraries',
         'Topic :: Software Development :: Libraries :: Python Modules'
     ],
@@ -60,7 +62,7 @@ setuptools.setup(
     install_requires=[
         'Django>=2.0'
     ],
-    python_requires='>=3.5',
+    python_requires='>=3.6',
     cmdclass={
         'verify': VerifyVersion,
     }

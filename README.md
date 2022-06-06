@@ -10,8 +10,8 @@ Django admin inlines for unrelated models
 This app allows you to create admin inlines for models that don't have an
 explicit foreign key relationship.
 
-To use, subclass your inline from
-`NonrelatedStackedInline` and add `get_form_queryset` and `save_new_instance`
+To use, subclass your inline from either `NonrelatedStackedInline` or 
+`NonrelatedTabularInline` and add `get_form_queryset` and `save_new_instance`
 methods.
 
 * `get_form_queryset(self, obj)` returns all objects that should be shown in
