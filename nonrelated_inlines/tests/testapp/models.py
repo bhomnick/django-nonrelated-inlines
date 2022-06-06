@@ -9,3 +9,8 @@ class Customer(models.Model):
 class Invoice(models.Model):
     email = models.EmailField()
     amount = models.IntegerField()
+
+
+class Note(models.Model):
+    email = models.EmailField()
+    content = models.TextField()

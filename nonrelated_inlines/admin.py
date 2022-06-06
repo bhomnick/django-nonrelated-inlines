@@ -23,10 +23,9 @@ class NonrelatedInlineModelAdminChecks(InlineModelAdminChecks):
         return []
 
 
-class NonrelatedStackedInline(admin.StackedInline):
+class NonrelatedInlineMixin:
     """
-    Stacked inline base class for models not explicitly related to the inline
-    model.
+    Mixin for models not explicitly related to the inline model.
     """
     checks_class = NonrelatedInlineModelAdminChecks
     formset = NonrelatedInlineFormSet
@@ -84,3 +83,11 @@ class NonrelatedStackedInline(admin.StackedInline):
             save_new_instance=self.save_new_instance,
             **defaults
         )
+
+
+class NonrelatedStackedInline(NonrelatedInlineMixin, admin.StackedInline):
+    pass
+
+
+class NonrelatedTabularInline(NonrelatedInlineMixin, admin.TabularInline):
+    pass
