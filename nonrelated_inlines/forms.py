@@ -24,6 +24,7 @@ class NonrelatedInlineFormSet(BaseModelFormSet):
         self.save_new_instance(self.instance, obj)
         if commit:
             obj.save()
+            form.save_m2m()
         return obj
 
 
